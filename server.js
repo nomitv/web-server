@@ -47,6 +47,13 @@ app.get('/about', (req, res) => {
   });
 });
 
+app.get('/project', (req, res) => {
+  res.render('about.hbs', {
+    pageTitle: 'Project Page',
+    welcomeMessage: 'Welcome to the Portfolio page'
+  });
+});
+
 app.get('/bad', (req, res) =>{
   res.send({
     errorMessage: 'Unable to fulfill this request'
